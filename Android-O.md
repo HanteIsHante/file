@@ -10,7 +10,7 @@
 
 3 [语言区域和国际化](https://developer.android.com/preview/behavior-changes.html#lai)
 
-4 [集合处理](https://developer.android.com/preview/behavior-changes.html#o-ch
+4 [集合处理](https://developer.android.com/preview/behavior-changes.html#o-ch)
 
 5 [权限变更](https://developer.android.com/preview/behavior-changes.html#rmp)
 
