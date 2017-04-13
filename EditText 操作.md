@@ -41,7 +41,7 @@ edit_text.setOnTouchListener(new View.OnTouchListener() {
  
 [自定义输入密码框](https://github.com/tianshaojie/Android-PasswordInputView)
 
-
+[一个不错的自定义输入密码框](https://github.com/EthanCo/PasswordInput)
 
 
 
