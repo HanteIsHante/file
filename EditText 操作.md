@@ -46,7 +46,9 @@ edit_text.setOnTouchListener(new View.OnTouchListener() {
 
 
 
+# EditText  属性
 
+[Android EditText属性解析](http://www.jianshu.com/p/c14f4d97b845#)
 
 
 
