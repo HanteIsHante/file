@@ -9,7 +9,7 @@
 
 原理
 
-如果你详细研究过android源码（当然本人看的是低版本的你懂的），在联系人模块中有一个文件：
+如果你详细研究过android源码，在联系人模块中有一个文件：
 packages/apps/Contacts/src/com/android/contacts/SpecialCharSequenceMgr.java
 他里面有一段关键代码是这样写的：
 ```
@@ -40,7 +40,7 @@ packages/apps/Contacts/src/com/android/contacts/SpecialCharSequenceMgr.java
 
 可以看到在拨号中当接收到*#*#< code >#*#* 这样的指令时，程序会对外发送广播。这就意味着我们都能够接收这个广播然后做自己想做的事情了
 
-
+[参见](http://www.jianshu.com/p/fa1143cf1b0f#)
 
 
 
