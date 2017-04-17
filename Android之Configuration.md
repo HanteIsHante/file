@@ -8,7 +8,7 @@ Configuration configuration=getResources().getConfiguration();
 ```
 ```
 
- public int densityDpi;  //得到设备的密度
+    public int densityDpi;  //得到设备的密度
     public float fontScale; //获取当前用户设置的字体的缩放因子
     public int KeyboardHidden;//该属性会返回一个boolean值用于表示当前的键盘是否可用,该属性不仅会判断系统的硬件键盘,也会判断系统位于屏幕上的软键盘,如果该系统的硬件键盘不可用但软键盘可用该属性会返回KEYBOARDHIDDEN_NO,只有当两个键盘都不可用的时候才返回KEYBOARDHIDDEN_YES
     public int keyboard;//获取当前设备所关联的键盘的类型
