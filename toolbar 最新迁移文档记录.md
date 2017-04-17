@@ -4,7 +4,7 @@
 
 
 
-### android中怎样去掉标题栏
+## android中怎样去掉标题栏
 
 > 在代码里实现
 
@@ -26,6 +26,45 @@ PS：这句代码要写在setContentView()前面。
     </style>
 
 ```
+
+> 我们创建的每一个Activity默认都是使用了ActionBar的,那么为了使用ToolBar,我们就应该首先去掉默认的ActionBar。注意我们应该去掉ActionBar,这里使用requestWindowFeature(Window.FEATURE_NO_TITLE);是不可以的,程序运行之后仍然会报错:
+
+```
+ Caused by: java.lang.IllegalStateException: This Activity already has an action bar supplied by the window decor. Do not request Window.FEATURE_SUPPORT_ACTION_BAR and set windowActionBar to false in your theme to use a Toolbar instead.                                               
+```
+我们这里在 res/values/styles.xml下编辑:
+```
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+           <!--注意当我们使用API版本为22及以上来编译的时候要去掉前缀android:-->
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
+
+
+```
+
+
+通过上面的编辑我们就可以完成ToolBar的添加了，这也是最常用的做法。 
+当然我们也可以直接将AppTheme继承自系统已有的主题也能满足效果。
+```
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+```
+
 
 
 ## ToolBar  控制 返回键的颜色及大小
