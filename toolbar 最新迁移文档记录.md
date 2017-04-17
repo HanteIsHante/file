@@ -46,10 +46,20 @@ PS：这句代码要写在setContentView()前面。
 ```
 colorControlNormal就是我们指定的返回键的颜色，Android：actionBarSize 是我们可以另指定的Toolbar高度
 
-[](http://img.blog.csdn.net/20160503150845033?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
-[](http://img.blog.csdn.net/20160503151113942?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+[toolbar_theme](http://img.blog.csdn.net/20160503150845033?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
+[toolbar_blue_theme](http://img.blog.csdn.net/20160503151113942?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
+同时,代码中添加 
+
+```
+
+ ActionBar actionBar =  getSupportActionBar();  
+        if(actionBar != null) {  
+            actionBar.setDisplayHomeAsUpEnabled(true);  
+            actionBar.setDisplayShowTitleEnabled(false);  
+        }  
+```
 
 
 
