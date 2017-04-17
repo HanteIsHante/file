@@ -28,6 +28,31 @@ PS：这句代码要写在setContentView()前面。
 ```
 
 
+#### ToolBar  控制 返回键的颜色及大小
+
+```
+
+<style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">  
+        <item name="colorControlNormal">@color/color_text_black</item>  
+        <item name="android:actionBarSize">46dp</item>  
+</style>  
+```
+
+```
+<style name="toolbar_blue_theme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">  
+        <item name="colorControlNormal">@color/color_text_blue</item>  
+        <item name="android:actionBarSize">46dp</item>  
+</style> 
+```
+colorControlNormal就是我们指定的返回键的颜色，Android：actionBarSize 是我们可以另指定的Toolbar高度
+
+[](http://img.blog.csdn.net/20160503150845033?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+[](http://img.blog.csdn.net/20160503151113942?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+
+
+
+
+
 
 
 
