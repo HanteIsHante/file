@@ -28,7 +28,7 @@ PS：这句代码要写在setContentView()前面。
 ```
 
 
-#### ToolBar  控制 返回键的颜色及大小
+## ToolBar  控制 返回键的颜色及大小
 
 ```
 
@@ -61,10 +61,26 @@ setSupportActionBar(mToolbar);
         }  
 ```
 
+## 如何用设计师切好的图替换我们系统原生的返回键呢？方法有两个
 
+> 1、在我们引入的Appbar的theme中添加一个Item，将设计师给我们的图放进去
 
+ ```
+<item name="android:homeAsUpIndicator">@drawable/web_detail_back</item> 
 
+```
 
+> 在我们的Toolbar中添加属性
+
+```
+app:navigationIcon="@drawable/web_detail_back"  
+```
+添加这个属性需要我们在根布局中添加（AS会有提示的）
+```
+xmlns:app="http://schemas.android.com/apk/res-auto"  
+
+```
+![效果图](http://img.blog.csdn.net/20160913005028440?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 
 
