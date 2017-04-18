@@ -50,7 +50,12 @@ edit_text.setOnTouchListener(new View.OnTouchListener() {
 
 [Android EditText属性解析](http://www.jianshu.com/p/c14f4d97b845#)
 
+### EditText 去掉下划线、光标不可见
 
+```
+ android:background="@null"
+ android:cursorVisible="false"
+```
 
 
 
