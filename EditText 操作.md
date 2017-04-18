@@ -56,6 +56,16 @@ edit_text.setOnTouchListener(new View.OnTouchListener() {
  android:background="@null"
  android:cursorVisible="false"
 ```
+#### 设置光标颜色
+ 
+在使用EditText的XML 文件中加入一个属性：
+```
+android:textCursorDrawable="@null" 
+```
+#android:textCursorDrawable#   这个属性是用来控制光标颜色的，
+"@null"   是作用是让光标颜色和text color一样
+比如 android:textCursorDrawable="@color/black_color"就可以设置成黑色。pad上面很多光标颜色和背景色一样。	
+ 
 
 
 
