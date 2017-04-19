@@ -93,5 +93,38 @@ EditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 ```
 
 
+### 监控软键盘是否弹出
+
+> InputMethodManager有一个方法isActive（View view）：如果view是输入法的活动view，则返回true。也就是说，如果是由view触发弹出软键盘，则返回true
+
+```
+if(isActive（edittext）)  
+    隐藏键盘  
+
+```
+
+接着让另一个view强制获取焦点,这样isActivite(ediitext)就为false.
+
+```
+InputMethodManager inputMethodManager = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);<br>private boolean hideKeyboard(){  
+        if(inputMethodManager.isActive(searchEditText)){
+        //因为是在fragment下，所以用了getView()获取view，也可以用findViewById（）来获取父控件  
+            getView().requestFocus();//使其它view获取焦点.这里因为是在fragment下,所以便用了getView(),可以指定任意其它view  
+            inputMethodManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(),                      InputMethodManager.HIDE_NOT_ALWAYS);  
+            return true;  
+        }  
+        return false;  
+    }   
+
+
+```
+
+
+
+
+
+
+
+
 
 
