@@ -38,6 +38,14 @@ edit_text.setOnTouchListener(new View.OnTouchListener() {
 ```
 
 [自定义输入框](https://github.com/EoniJJ/PasswordView/)
+
+
+[ android 中如何限制 EditText 最大输入字符数](http://blog.csdn.net/fulinwsuafcie/article/details/7437768)
+
+
+
+
+
  
 [自定义输入密码框](https://github.com/tianshaojie/Android-PasswordInputView)
 
