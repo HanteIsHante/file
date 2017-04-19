@@ -75,5 +75,23 @@ android:textCursorDrawable="@null"
 比如 android:textCursorDrawable="@color/black_color"就可以设置成黑色。pad上面很多光标颜色和背景色一样。	
  
 
+### edittext有没有获取焦点
+
+```
+
+EditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {  
+       
+    @Override  
+    public void onFocusChange(View v, boolean hasFocus) {  
+        if(hasFocus){//获得焦点  
+               
+        }else{//失去焦点  
+             
+        }  
+    }             
+});
+```
+
+
 
 
