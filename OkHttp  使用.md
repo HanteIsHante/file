@@ -29,6 +29,18 @@ if (!response.isSuccessful()) throw new IOException("Unexpected code " + respons
 response.close();
 ```
 
+### 取消任务功能
+
+```
+ Call call = OkHttpClient.newCall(request)
+
+ call.cancel();
+```
+
+
+
+
+
 
 
 
