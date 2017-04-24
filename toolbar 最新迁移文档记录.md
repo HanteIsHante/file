@@ -178,10 +178,35 @@ app:subtitleTextAppearance="@style/Theme.ToolBar.Base.Subtitle"
 
 
 
+####  [解决 软键盘弹出 toolbar  遮挡问题](https://juejin.im/entry/58f8a8efda2f60005da90844)
+
+```
+private View ll_root;
+/**
+ * 窗体控件上一次的高度,用于监听键盘弹起
+ */
+private int mLastHeight;
 
 
+//onCreate中执行
+final View decorView = this.getWindow().getDecorView();//获取window的视图
+decorView.getViewTreeObserver().addOnGlobalLayoutListener(
+        new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                Rect r = new Rect();
+                decorView.getWindowVisibleDisplayFrame(r);
+                //window视图添加控件此方法可能会被多次调用,防止重复调用
+                if (mLastHeight != r.bottom) {
+                    mLastHeight = r.bottom;
+                    ViewGroup.LayoutParams params = ll_root.getLayoutParams();
+                    params.height = r.bottom - ll_root.getTop();
+                    ll_root.setLayoutParams(params);
+                }
+            }
+        });
 
-
+```
 
 
 
