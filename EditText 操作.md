@@ -75,6 +75,32 @@ android:textCursorDrawable="@null"
 比如 android:textCursorDrawable="@color/black_color"就可以设置成黑色。pad上面很多光标颜色和背景色一样。	
  
 
+####  [动态设置光标颜色](http://blog.csdn.net/qq_30247473/article/details/50422245)
+
+  反射办法修改输入框光标颜色完成
+  ```
+try {
+            Field f = TextView.class.getDeclaredField("mCursorDrawableRes");
+            f.setAccessible(true);
+            f.set(editPhoneNum, R.drawable.cursor);
+        } catch (Exception ignore) {}
+
+ ``` 
+
+```
+<shape xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:shape="rectangle" >  
+  
+    <solid android:color="#ff000000" />  
+  
+    <size android:width="1dp" />  
+  
+</shape>  
+```
+
+
+
+
 ### edittext有没有获取焦点
 
 ```
