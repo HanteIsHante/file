@@ -100,6 +100,27 @@ setSupportActionBar(mToolbar);
         }  
 ```
 
+
+#####   Fragment 中添加toolbar
+
+Fragment没有setSupportActionBar
+```
+        AppCompatActivity mAppCompatActivity = (AppCompatActivity) mActivity;
+        Toolbar toolbar = (Toolbar) mAppCompatActivity.findViewById(R.id.toolbar);
+        mAppCompatActivity.setSupportActionBar(toolbar);       
+        ActionBar actionBar = mAppCompatActivity.getSupportActionBar();
+        if (actionBar != null) {
+              activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            activity.getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+```
+
+
+
+
+
+
+
 ## 如何用设计师切好的图替换我们系统原生的返回键呢？方法有两个
 
 > 1、在我们引入的Appbar的theme中添加一个Item，将设计师给我们的图放进去
