@@ -143,6 +143,47 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 ![效果图](http://img.blog.csdn.net/20160913005028440?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 
+#### Toolbar  自定义标题 大小颜色
+
+
+定义 Style 样式
+```
+<style name="Theme.ToolBar.Base.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">@android:color/white</item>
+</style>
+<style name="Theme.ToolBar.Base.Subtitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+    <item name="android:textSize">11sp</item>
+    <item name="android:textColor">@color/toolbar_subTile_color</item>
+</style>
+
+```
+
+引用样式：
+
+1. 在java代码中引用：
+```
+mToolbar.setTitleTextAppearance(this,R.style.Theme_ToolBar_Base_Title);
+mToolbar.setSubtitleTextAppearance(this,R.style.Theme_ToolBar_Base_Subtitle);
+```
+2. xml 中引用
+
+```
+app:titleTextAppearance="@style/Theme.ToolBar.Base.Title"
+app:subtitleTextAppearance="@style/Theme.ToolBar.Base.Subtitle"
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
