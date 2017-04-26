@@ -146,6 +146,10 @@ InputMethodManager inputMethodManager = (InputMethodManager)getActivity().getSys
 ```
 
 
+###  Editext 改变hint 提示文字
+
+1. xml 布局中 修改 hint  属性
+2. EditPhoneNum.setHint(getResources().getString(R.string.input_new_phone));
 
 
 
