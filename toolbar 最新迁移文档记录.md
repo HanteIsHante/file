@@ -67,7 +67,7 @@ PS：这句代码要写在setContentView()前面。
 
 
 
-## ToolBar  控制 返回键的颜色及大小
+## ToolBar  控制 返回键的颜色及大小及 menu 菜单键的颜色
 
 ```
 
@@ -173,6 +173,112 @@ app:titleTextAppearance="@style/Theme.ToolBar.Base.Title"
 app:subtitleTextAppearance="@style/Theme.ToolBar.Base.Subtitle"
 
 ```
+
+##  Toolbar  设置menu 菜单
+
+> menu
+
+```
+<!-
+1、always：使菜单项一直显示在ToolBar上。
+2、ifRoom：如果有足够的空间，这个值会使菜单项显示在ToolBar上。
+3、never：使菜单项永远都不出现在ToolBar上,在…的子项中显示。
+4、withText：使菜单项和它的图标，菜单文本一起显示。-->
+
+<item
+    android:id="@+id/action_edit"
+    android:icon="@mipmap/ic_launcher"
+    android:orderInCategory="80"
+    android:title="edit"
+    app:showAsAction="ifRoom" />
+
+<!--点击这个图标展开搜索-->
+<item
+    android:id="@+id/action_search"
+    android:title="dd"
+    android:orderInCategory="90"
+    app:showAsAction="collapseActionView|ifRoom"
+    app:actionViewClass="android.support.v7.widget.SearchView"
+    android:icon="@mipmap/ic_launcher"
+    />
+
+<!--这两item是隐藏在右上角三个圆点里面的-->
+<item
+    android:id="@+id/item1"
+    android:title="overflow"
+    app:showAsAction="never" />
+
+<item
+    android:id="@+id/item2"
+    android:title="overflow"
+    app:showAsAction="never" />
+
+</menu>
+
+
+```
+
+> activity  种
+
+```
+  /**菜单控件的一些点击事件*/
+    toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.action_edit:
+                    Toast.makeText(Main2Activity.this, "action_edit",Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.action_search:
+                    Toast.makeText(Main2Activity.this, "action_search",Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.item1:
+                    Toast.makeText(Main2Activity.this, "item1",Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.item2:
+                    Toast.makeText(Main2Activity.this, "item2",Toast.LENGTH_SHORT).show();
+                    break;
+            }
+            return true;
+        }
+    });
+    
+    //如果有Menu,创建完后,系统会自动添加到ToolBar上
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    super.onCreateOptionsMenu(menu);
+    getMenuInflater().inflate(R.menu.menu_main, menu);
+
+    /**搜索按钮的相关逻辑*/
+    MenuItem menuItem=menu.findItem(R.id.action_search);//
+    searchView= (SearchView) MenuItemCompat.getActionView(menuItem);//加载searchview
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        @Override
+        public boolean onQueryTextSubmit(String query) {
+            Toast.makeText(Main2Activity.this, query,Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        @Override
+        public boolean onQueryTextChange(String newText) {
+            if (TextUtils.isEmpty((newText))){
+                Toast.makeText(Main2Activity.this,"isEmpty",Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(Main2Activity.this, newText,Toast.LENGTH_SHORT).show();
+            }
+
+            return true;}
+    });//为搜索框设置监听事件
+    searchView.setSubmitButtonEnabled(true);//设置是否显示搜索按钮
+    searchView.setQueryHint("查找");//设置提示信息
+    searchView.setIconifiedByDefault(true);//设置搜索默认为图标
+    return true;
+}
+    
+     
+
+```
+
 
 
 
