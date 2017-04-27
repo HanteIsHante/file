@@ -1,5 +1,26 @@
 
-# Retrofit 2.0
+# [Retrofit github](https://github.com/square/retrofit)、 [Retrofit square](http://square.github.io/retrofit/)
+
+ 
+
+[Retrofit 升级2.0 ](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0915/3460.html)
+
+[Retrofit 升级日志](https://github.com/square/retrofit/blob/master/CHANGELOG.md)
+
+1. 自定义Gson对象
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
