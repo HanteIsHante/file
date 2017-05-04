@@ -153,7 +153,25 @@ InputMethodManager inputMethodManager = (InputMethodManager)getActivity().getSys
 
 
 
+###  Editext  监听软键盘 enter 键
 
+ 
+
+```
+TextView editText = new TextView(this);
+editText.setOnEditorActionListene(
+newTextView.OnEditorActionListener() {  
+          public boolean onEditorAction(TextView v, int actionId,  
+                            KeyEvent event){  
+                        if (actionId == EditorInfo.IME_ACTION_SEND)  
+                        {  
+                            // 在这里编写自己想要实现的功能  
+                        }  
+                        return false;  
+          }  
+});
+
+```
 
 
 
