@@ -42,9 +42,18 @@ response.close();
 
 
 
+### MultipartBody
 
+    看下源码可知它适用于这五种Content-Type:
 
+```
 
+public static final MediaType MIXED = MediaType.parse("multipart/mixed");
+public static final MediaType ALTERNATIVE = MediaType.parse("multipart/alternative");
+public static final MediaType DIGEST = MediaType.parse("multipart/digest");
+public static final MediaType PARALLEL = MediaType.parse("multipart/parallel");
+public static final MediaType FORM = MediaType.parse("multipart/form-data");
+```
 
 
 
