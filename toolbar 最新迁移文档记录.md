@@ -250,8 +250,23 @@ app:subtitleTextAppearance="@style/Theme.ToolBar.Base.Subtitle"
             return true;
         }
     });
-    
-    //如果有Menu,创建完后,系统会自动添加到ToolBar上
+    --  -- --
+    或者
+    -- -- --
+     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.item_setting:
+                Toast.makeText(this, "设置", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.item_model:
+                Toast.makeText(this, "模式", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }
+    -- -- -- 
+    //如果有Menu,创建完后,系统会自动添加到ToolBar上
 @Override
 public boolean onCreateOptionsMenu(Menu menu) {
     super.onCreateOptionsMenu(menu);
@@ -306,7 +321,7 @@ public boolean onCreateOptionsMenu(Menu menu) {
 ```
 
 
-
+ 
 
 
 
