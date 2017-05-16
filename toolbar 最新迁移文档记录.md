@@ -224,6 +224,7 @@ app:subtitleTextAppearance="@style/Theme.ToolBar.Base.Subtitle"
 
 
 ```
+ 
 
 > activity  种
 
@@ -285,6 +286,25 @@ public boolean onCreateOptionsMenu(Menu menu) {
      
 
 ```
+> 另一中添加menu 方式：
+
+```
+  //添加溢出菜单
+       toolbar.inflateMenu(R.menu.setting_menu);
+       // 添加菜单点击事件
+       toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+           @Override
+           public boolean onMenuItemClick(MenuItem item) {
+               switch (item.getItemId()){
+                   case R.id.item_setting:
+                       //点击设置菜单
+                       break;
+               }
+               return false;
+           }
+       }); 
+```
+
 
 
 
