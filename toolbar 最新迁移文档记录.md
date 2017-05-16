@@ -99,7 +99,26 @@ setSupportActionBar(mToolbar);
             actionBar.setDisplayShowTitleEnabled(false);  
         }  
 ```
-
+> 返回键点击
+```
+ @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        //导航按钮的id是android.R.id.home
+            case android.R.id.home:
+                
+                break;
+        }
+        return true;
+    }
+    --------
+    mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                 
+            }
+        });
+```
 
 #####   Fragment 中添加toolbar
 
