@@ -85,6 +85,11 @@ PS：这句代码要写在setContentView()前面。
 ```
 colorControlNormal就是我们指定的返回键的颜色，Android：actionBarSize 是我们可以另指定的Toolbar高度
 
+
+![设置标题与NavigationIcon的距离](http://mmbiz.qpic.cn/mmbiz_png/MOu2ZNAwZwNdKcgbQZiaYFmTa7fmNaID0eFGlb4pJyObcRsbg8Ik2nC445IJliaibsNUibeSicFiaW5fusqKtLhsDSBw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+
+
+
 ![toolbar_theme](http://img.blog.csdn.net/20160503150845033?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 ![toolbar_blue_theme](http://img.blog.csdn.net/20160503151113942?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
