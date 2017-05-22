@@ -2,6 +2,9 @@
 # [ToolBar](https://developer.android.com/reference/android/widget/Toolbar.html)
 
 
+    参考链接：
+
+[网易云音乐搜索框](http://mp.weixin.qq.com/s/wVcwebCfPcpPcKTYmA7F-w)
 
 
 ## android中怎样去掉标题栏
