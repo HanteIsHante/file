@@ -2,7 +2,7 @@
 
 
 
-#  Navigation Drawer
+#  BaseActivity 实现DrawerLayout Navigation Drawer
 
 ### 设置 Navigation Drawer在BaseActivity 布局
 
@@ -80,7 +80,40 @@ public class MainActivity extends BaseActivity {
 
 ```
 
+# 实现DrawerLayout 不覆盖主布局
 
+
+设置监听
+
+```
+ DrawerLayout.DrawerListener listen = new DrawerLayout.DrawerListener() {
+
+        @Override
+        public void onDrawerSlide(View drawerView, float slideOffset) {
+              //slideOffset.0-1.0，是一个相对整个抽屉宽度的比例
+              //所以要准换成
+              float  scrollWidth = slideOffset * 侧拉栏ID.getMeasuredWidth();
+              //setScroll中的参数，正数表示向左移动，负数向右
+              主布局id.setScrollX((int)(1*scrollWidth));
+        }
+
+        @Override
+        public void onDrawerOpened(View drawerView) {
+           
+        }
+
+        @Override
+        public void onDrawerClosed(View drawerView) {
+           
+        }
+
+        @Override
+        public void onDrawerStateChanged(int newState) {
+
+        }
+    };
+
+```
 
 
 
