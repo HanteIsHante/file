@@ -115,10 +115,13 @@ public class MainActivity extends BaseActivity {
 
 ```
 
+ ### drawerlayout 拉出后会有一个变暗的效果，如果想取消这种效果，可以添加:
 
+```
+drawer_layout.setScrimColor(0x00ffffff);
+```
 
-
-
+这一句，将整个屏幕保持高亮。
 
 
 
