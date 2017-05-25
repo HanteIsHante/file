@@ -125,7 +125,30 @@ drawer_layout.setScrimColor(0x00ffffff);
 
 
 
+###  通过 button 打开关闭 DrawerLayout
+ 
+ 打开
+```
+ drawer_layout_root.openDrawer(菜单ID);
+
+```
+关闭
+```
+drawer_layout_root.closeDrawer(菜单ID);
+```
 
 
+### 返回键
 
+```
+  @Override
+    public void onBackPressed () {
+        if(drawerlayout.isDrawerOpen(GravityCompat.START)) {
+            drawerlayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+            return;
+        }
+    }
 
+```
