@@ -147,7 +147,6 @@ drawer_layout_root.closeDrawer(菜单ID);
             drawerlayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-            return;
         }
     }
 
