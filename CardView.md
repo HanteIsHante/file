@@ -35,3 +35,25 @@
 ```
 
 CardView布局中加入属性android:stateListAnimator="@animator/touch_raise"
+
+
+
+CardView  作为item 布局 设置CardView背景：
+
+ 
+    android:background="@drawable/card_selector"
+
+无效果
+
+
+
+
+
+
+
+
+
+
+
+
+
