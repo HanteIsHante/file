@@ -34,3 +34,18 @@ public static String getMd5(File file) throws FileNotFoundException {
     }
 
 ```
+
+##### 通过CMD获取签名证书的MD5和SHA1,SHA256值.
+
+1. 使用CMD（命令行窗口），进入签名文件所在的目录
+2. 输入命令：keytool -list -v -keystore 证书名称
+提示输入： 证书的密码
+输入正确后，即可看到：MD5, SHA1，SHA256值。
+
+
+
+
+
+
+
+
