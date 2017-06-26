@@ -55,6 +55,7 @@ public static final MediaType PARALLEL = MediaType.parse("multipart/parallel");
 public static final MediaType FORM = MediaType.parse("multipart/form-data");
 ```
 
-
+## 注：
+. okhttp 请求头 不支持包含中文， [参考](http://www.jianshu.com/p/ddbe8c637fc5)  及 [博客](http://blog.csdn.net/mobilexu/article/details/50699768)
 
 
