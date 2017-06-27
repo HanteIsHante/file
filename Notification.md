@@ -14,7 +14,9 @@
 
 
 
-> Notification  点击跳转， 需要给它一个PendingIntent，让这个通知能跳转到应用。如果应用已退出，则启动；如果应用是通过Home键回到桌面的，则进入到应用之前的界面不重新启动。这个PendingIntent需要传一个intent，就是通过这个Intent来实现的， 如果已在应用当前界面则不需要重新创建
+### Notification  点击通知栏跳转
+
+> 需要给它一个PendingIntent，让这个通知能跳转到应用。如果应用已退出，则启动；如果应用是通过Home键回到桌面的，则进入到应用之前的界面不重新启动。这个PendingIntent需要传一个intent，就是通过这个Intent来实现的， 如果已在应用当前界面则不需要重新创建
 
 
 ```
