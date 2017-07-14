@@ -12,6 +12,6 @@
 
 1. 微信文档有错误， 一定要注意， 比如prepayID 标有32位，其实是错误的，得到签名后的 prepayID  是多少位就传进微信SDK 多少位
 2. 需要在 release 版下验证是否能够调起支付详情页面，在debug 版下，会产生errorCode -1;
-3. 微信支付(分享) 结果回调需在${applicationId}.wxapi.WXEntryActivity 下才能接收到, [通过<activity-alias/> 标签来引向该回调目录](http://www.jianshu.com/p/d6395d947e3d)
+3. 微信支付(分享) 结果回调需在${applicationId}.wxapi.WXEntryActivity 下才能接收到, [通过"activity-alias" 标签来引向该回调目录](http://www.jianshu.com/p/d6395d947e3d)
 
 
