@@ -6,7 +6,7 @@
 
 
 
-# Wechat
+# WechatPay
 
 > 注意事项：
 
